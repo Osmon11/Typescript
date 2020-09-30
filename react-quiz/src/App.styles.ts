@@ -41,7 +41,7 @@ export const Wrapper = styled.div`
     padding: 0 40px;
   }
 
-  start {
+  .start {
     max-width: 200px;
   }
 `;

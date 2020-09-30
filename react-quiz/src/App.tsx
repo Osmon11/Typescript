@@ -97,7 +97,7 @@ function App() {
       <Wrapper>
         <h1>RECT QUIX</h1>
         {gameOver || userAns.length === TOTAL_QUESTIONS ? (
-          <button className="start_btn" onClick={startTrivia}>
+          <button className="start" onClick={startTrivia}>
             Start
           </button>
         ) : null}
