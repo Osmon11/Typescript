@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { QuestionState, Difficulty, Question, fetchQuizQuestions } from "./API";
+import { QuestionState, Difficulty, fetchQuizQuestions } from "./API";
 import QuestionCard from "./component/questionCard";
 //Styles
 import { createGlobalStyle } from "styled-components";
