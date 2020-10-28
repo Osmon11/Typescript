@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient( -30deg, #03a9f4 0%, #1c3955 50%, #262626 50%, #607d8b 100%);
+  /* filter: hue-rotate(120deg); */
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(160deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+.box, .game-box, .admin_box {
+  position: relative;
+  padding: 50px;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+
+.box, .game-box, .admin_box {
+  width: auto;
+  height: auto;
+}
+
+.box::after, .game-box::after, .admin_box::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  background: linear-gradient( to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 15%, transparent 50%, transparent 85%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.box .form {
+  position: relative;
+  width: 100%;
+}
+
+.box .form h2 {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.box .form .inputBx, .admin_box form div {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.admin_box form div {
+  margin-left: 1rem;
+}
+
+.box .form .inputBx input, section .ButtonBx a button, .admin_box form div input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  padding: 8px 10px;
+  padding-left: 35px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.box .form .inputBx input::placeholder, section .ButtonBx a button, .admin_box form div input::placeholder {
+  color: #fff;
+}
+
+section .ButtonBx {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.box .form .inputBx input[type="submit"], section .ButtonBx a button, .admin_box form div input[type="submit"] {
+  background: #fff;
+  color: #111;
+  max-width: 100px;
+  padding: 8px 10px;
+  box-shadow: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.box .form .inputBx img, .admin_box form div img {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  transform: scale(0.7);
+  filter: invert(1);
+}
+
+.remember {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.boz .form p {
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.boz .form a {
+  color: #fff;
+}
+
+/* Game */
+
+.content {
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+
+.letter_list {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 119px;
+  text-align: left;
+  margin: 67px auto 0 auto;
+  cursor: default;
+}
+
+.letter_list ul {
+  text-align: left;
+  cursor: default;
+  list-style-type: none;
+}
+
+.letter_list ul li {
+  cursor: default;
+  list-style-type: none;
+  width: 50px;
+  height: 54px;
+  font: 42px Poppins;
+  color: #ffce01;
+  background-color: #ffce01;
+  text-transform: uppercase;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  transition: linear 0.5s;
+  transform: rotateY(180deg);
+  float: left;
+}
+
+.openLetter {
+  background-color: transparent !important;
+  transform: rotateY(0deg) !important;
+}
+
+.alph_block {
+  width: 620px;
+  padding-top: 14px;
+  margin-left: 178px;
+  margin-top: -2px;
+  z-index: 111;
+  position: relative;
+  top: -34px;
+}
+
+.question_block {
+  min-height: 66px;
+  width: 608px;
+  margin-left: 6px;
+  cursor: default;
+}
+
+.question, .answer {
+  cursor: default;
+  width: 510px;
+  margin-left: 16px;
+  float: left;
+}
+
+.question span, .answer span {
+  text-align: left;
+  cursor: default;
+  font-size: 17px;
+  color: #fff;
+  margin-left: 12px;
+  margin-top: 3px;
+  display: block;
+}
+
+.question span strong, .answer span strong {
+  text-align: left;
+  cursor: default;
+  padding-right: 5px;
+  font: 16px Poppins;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.clear {
+  cursor: default;
+  clear: both;
+  line-height: 1%;
+  margin-bottom: -1px;
+  height: 0px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.letter_block {
+  width: 608px;
+  margin: 6px 0 0 6px;
+}
+
+.letter_pic {
+  text-align: left;
+}
+
+.letter_pic ul {
+  list-style-type: none;
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+.letter_pic ul li {
+  list-style-type: none;
+  margin-right: 3px;
+  margin-bottom: 4px;
+  float: left;
+}
+
+.letter_pic ul li span {
+  list-style-type: none;
+  width: 47px;
+  height: 39px;
+  font: bold 24px Poppins;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.letter_pic ul li span:hover {
+  background-color: royalblue;
+  border: 1px solid #fff;
+}
+
+.slovo {
+  margin-right: 20px;
+  float: right;
+}
+
+.slovo span {
+  color: #fff;
+  background: linear-gradient(#13d72b 0%, #5dba1b 100%);
+  width: 147px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin .admin_box .question_block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.admin_box form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.admin_box .cart-close {
+  position: absolute;
+  background-color: red;
+  border-radius: 5px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='005bff' d='M12 10.587l6.293-6.294a1 1 0 111.414 1.414l-6.293 6.295 6.293 6.294a1 1 0 11-1.414 1.414L12 13.416 5.707 19.71a1 1 0 01-1.414-1.414l6.293-6.294-6.293-6.295a1 1 0 011.414-1.414L12 10.587z'/%3E%3C/svg%3E");
+}
+
+.admin_box .cart-close:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
