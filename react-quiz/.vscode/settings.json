@@ -1,6 +1,0 @@
-{
-  "editor.formatOnSave": true,
-  "editor.autoClosingBrackets": "always",
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-  "god.tsconfig": "./tsconfig.json"
-}
